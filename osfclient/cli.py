@@ -224,7 +224,10 @@ def list_(args):
             if path.startswith('/'):
                 path = path[1:]
 
-            print(os.path.join(prefix, path))
+            vals = [os.path.join(prefix, path)]
+            if args.long:
+                vals.append(str(file_.guid))
+            print(",".join(vals))
 
 
 @might_need_auth

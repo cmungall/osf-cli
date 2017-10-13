@@ -30,6 +30,7 @@ class File(OSFCore):
         self._upload_url = self._get_attribute(file, 'links', 'upload')
         self._delete_url = self._get_attribute(file, 'links', 'delete')
         self.osf_path = self._get_attribute(file, 'attributes', 'path')
+        self.guid = self._get_attribute(file, 'attributes', 'guid')
         self.path = self._get_attribute(file,
                                         'attributes', 'materialized_path')
         self.name = self._get_attribute(file, 'attributes', 'name')
