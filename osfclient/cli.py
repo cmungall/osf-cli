@@ -229,6 +229,7 @@ def list_(args):
             vals = [os.path.join(prefix, path)]
             if args.long:
                 vals.append(str(file_.guid))
+                vals.append(str(file_.download))
             writer.writerow(vals)
 
 
